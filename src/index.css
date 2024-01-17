@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-element {
+    @apply w-[90vw] max-w-6xl mx-auto;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-r from-[#283C86] via-[#377165] to-[#45A247];
+  }
+
+  .secondary-gradient {
+    @apply bg-gradient-to-r from-[#45A247] to-[#283C86];
+  }
+
+  .before-element {
+    @apply before:h-[2px] before:w-3/5 before:duration-300 before:bg-clr-yellow hover:before:bg-primary-gray hover:before:w-full before:transition-all before:rounded-md before:absolute before:-bottom-2;
+  }
+}
+
+* {
+  font-family: 'Nunito', 'sans-serif';
+}
+
+p {
+  max-width: 600px;
+}
+
+.header {
+  background: linear-gradient(
+      rgba(40, 60, 134, 0.85),
+      rgba(55, 113, 101, 0.85),
+      rgba(69, 162, 71, 0.85)
+    ),
+    url('./src/assets/images/hero-bg.png') center/cover no-repeat;
+}
