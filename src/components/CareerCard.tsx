@@ -5,7 +5,6 @@ interface ICardProps {
   className: string;
 }
 
-// const CareerCard: React.FC<ICardProps> = ({
 const CareerCard: React.FC<ICardProps> = ({
   title,
   info,

@@ -1,6 +1,5 @@
-import img1 from '../assets/images/asset 1.png';
-import img2 from '../assets/images/asset 6.png';
 import { ContactForm } from '../components';
+import { images } from '../constants';
 
 const ContactPage = () => {
   return (
@@ -16,7 +15,7 @@ const ContactPage = () => {
           </p>
         </article>
         <article className='flex-center'>
-          <img src={img1} alt='' className='block w-full object-cover' />
+          <img src={images.img1} alt='' className='block w-full object-cover' />
         </article>
       </div>
 
@@ -29,7 +28,7 @@ const ContactPage = () => {
             <ContactForm />
           </article>
           <article>
-            <img src={img2} alt='' className='block w-full object-cover' />
+            <img src={images.img2} alt='' className='block w-full object-cover' />
           </article>
         </div>
       </div>

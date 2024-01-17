@@ -1,4 +1,4 @@
-import logo from '../assets/images/logo.png';
+import {images} from '../constants';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { NavLinks } from './index';
 
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className='w-full bg-black py-20 flex-center'>
       <div className='align-element'>
         <div>
-          <img src={logo} alt='translense-logo' />
+          <img src={images.logo} alt='translense-logo' />
         </div>
 
         <div className='flex items-start justify-between text-white mt-4'>

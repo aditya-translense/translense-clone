@@ -1,22 +1,10 @@
+import {images} from '../constants'
 import {
   SectionTitle,
   Button,
   CareerCard,
   CareerLayoutCard,
 } from '../components';
-import career1 from '../assets/images/career1.png';
-import career2 from '../assets/images/career2.svg';
-import career3 from '../assets/images/career3.svg';
-import career4 from '../assets/images/career4.svg';
-import career5 from '../assets/images/career5.png';
-import career6 from '../assets/images/career6.png';
-import career7 from '../assets/images/career7.png';
-import career8 from '../assets/images/career8.png';
-import career9 from '../assets/images/career9.png';
-// import career10 from '../assets/images/career10.png';
-// import career11 from '../assets/images/career11.png';
-import dottedLineLeft from '../assets/images/dotted-line-left.svg';
-import dottedLineRight from '../assets/images/dotted-line-right.svg';
 
 const CareerPage = () => {
   return (
@@ -39,7 +27,7 @@ const CareerPage = () => {
           </article>
           <article>
             <img
-              src={career1}
+              src={images.career1}
               alt='career1'
               className='block w-full object-cover'
             />
@@ -52,21 +40,21 @@ const CareerPage = () => {
           <SectionTitle text="We're hiring" className='capitalize' />
           <div className='flex rounded-3xl overflow-hidden mt-20'>
             <CareerCard
-              image={career2}
+              image={images.career2}
               title='UI/UX'
               info='  Designing and developing a UI/UX with easy flow and better user
                 gathering.'
               className='bg-[rgba(40,60,134,.5)]'
             />
             <CareerCard
-              image={career3}
+              image={images.career3}
               title='UI/UX'
               info='  Designing and developing a UI/UX with easy flow and better user
                 gathering.'
               className='bg-[rgba(255,193,7,0.5)]'
             />
             <CareerCard
-              image={career4}
+              image={images.career4}
               title='UI/UX'
               info='  Designing and developing a UI/UX with easy flow and better user
                 gathering.'
@@ -80,37 +68,37 @@ const CareerPage = () => {
         <SectionTitle text='Our Recruitment Process' />
         <div className='mt-20 flex flex-col justify-center items-center'>
           <CareerLayoutCard
-            image1={career5}
-            image2={dottedLineRight}
+            image1={images.career5}
+            image2={images.dottedLineRight}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />
           <CareerLayoutCard
-            image1={dottedLineLeft}
-            image2={career6}
+            image1={images.dottedLineLeft}
+            image2={images.career6}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />
           <CareerLayoutCard
-            image1={career7}
-            image2={dottedLineRight}
+            image1={images.career7}
+            image2={images.dottedLineRight}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />
           <CareerLayoutCard
-            image1={dottedLineLeft}
-            image2={career8}
+            image1={images.dottedLineLeft}
+            image2={images.career8}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />
           <CareerLayoutCard
-            image1={career8}
-            image2={dottedLineRight}
+            image1={images.career9}
+            image2={images.dottedLineRight}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />
           <CareerLayoutCard
-            image2={career9}
+            image2={images.career10}
             title='1)Application'
             description='Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com'
           />

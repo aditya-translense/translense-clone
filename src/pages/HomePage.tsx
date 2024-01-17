@@ -1,12 +1,6 @@
 import { FaCheck } from 'react-icons/fa6';
 import { Button, SectionTitle, WhyUsCard } from '../components';
-import { whyUsInfo } from '../constants';
-import visionImg from '../assets/images/vision.png';
-import heroImg from '../assets/images/hero.png';
-import patternImg1 from '../assets/images/asset 9.png';
-import patternImg2 from '../assets/images/asset 10.png';
-import patternImg3 from '../assets/images/asset 4.png';
-import patternImg4 from '../assets/images/asset 5.png';
+import { whyUsInfo,images } from '../constants';
 
 const HomePage = () => {
   return (
@@ -49,7 +43,7 @@ const HomePage = () => {
               </ul>
             </article>
             <article>
-              <img src={heroImg} alt='hero-img' />
+              <img src={images.heroImg} alt='hero-img' />
             </article>
           </div>
         </div>
@@ -60,13 +54,13 @@ const HomePage = () => {
           <SectionTitle text='We Create lovable products going from vision to launch' />
           <div className='flex justify-center relative mt-24'>
             <img
-              src={patternImg3}
+              src={images.patternImg3}
               alt='pattern-img-3'
               className='absolute right-36 -top-52'
             />
             <article className='self-stretch'>
               <img
-                src={visionImg}
+                src={images.visionImg}
                 alt='vision-img'
                 className='block w-full object-cover'
               />
@@ -89,7 +83,7 @@ const HomePage = () => {
               </div>
             </article>
             <img
-              src={patternImg4}
+              src={images.patternImg4}
               alt='pattern-img-4'
               className='absolute right-0 -bottom-28'
             />
@@ -114,11 +108,11 @@ const HomePage = () => {
         </div>
 
         <div className=' relative py-20 flex-center flex-col'>
-          <img src={patternImg1} alt='pattern-1' className='absolute left-10' />
+          <img src={images.patternImg1} alt='pattern-1' className='absolute left-10' />
           <SectionTitle text='Join Our Team And Live YOUR Dream' />
           <Button text='PARTNER WITH US' className='mx-auto mt-24' />
           <img
-            src={patternImg2}
+            src={images.patternImg2}
             alt='pattern-2'
             className='absolute right-10'
           />

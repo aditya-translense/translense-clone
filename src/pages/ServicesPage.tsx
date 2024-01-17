@@ -1,8 +1,5 @@
 import { SectionTitle, Button, ServiceCard } from '../components';
-import { serviceCardInfo } from '../constants';
-import serviceBgImg from '../assets/images/service-bg.svg';
-import quotesIcon from '../assets/images/quotes.svg';
-import dottedLineImg from '../assets/images/dotted-line.png';
+import { serviceCardInfo,images } from '../constants';
 
 const ServicesPage = () => {
   return (
@@ -22,7 +19,7 @@ const ServicesPage = () => {
           </p>
         </article>
         <article className='flex-1 block w-full '>
-          <img src={serviceBgImg} alt='' className='w-full h-full ' />
+          <img src={images.serviceBgImg} alt='' className='w-full h-full ' />
         </article>
       </section>
 
@@ -30,7 +27,7 @@ const ServicesPage = () => {
         <SectionTitle text='Know our services' />
         <div className='flex max-w-5xl mt-16'>
           <article className='flex items-start gap-8'>
-            <img src={quotesIcon} alt='quotes-icon' />
+            <img src={images.quotesIcon} alt='quotes-icon' />
             <h2 className='text-2xl font-bold tracking-wider max-w-xl'>
               We know where our strengths lie and where we need to leverage
               additional expertise, so you get the best results.
@@ -70,7 +67,7 @@ const ServicesPage = () => {
               className='text-start w-full mx-0'
             />
             <img
-              src={dottedLineImg}
+              src={images.dottedLineImg}
               alt=''
               className='absolute left-2/4 top-16 -translate-x-1/2 rotate-6'
             />
