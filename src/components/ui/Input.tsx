@@ -1,7 +1,4 @@
-interface IFormInput {
-  placeholder: string;
-  type: string;
-  name: string;
+interface IFormInput extends React.InputHTMLAttributes<HTMLInputElement> {
   icon: JSX.Element;
 }
 

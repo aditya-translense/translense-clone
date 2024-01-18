@@ -28,6 +28,10 @@
   .before-element {
     @apply before:h-[2px] before:w-3/5 before:duration-300 before:bg-clr-yellow hover:before:bg-primary-gray hover:before:w-full before:transition-all before:rounded-md before:absolute before:-bottom-2;
   }
+
+  .block-img {
+    @apply block w-full object-cover;
+  }
 }
 
 * {
