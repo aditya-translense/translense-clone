@@ -1,7 +1,7 @@
 import { SectionTitle, Button, ServiceCard } from '../components';
 import { serviceCardInfo, images } from '../constants';
 
-const ServicesPage = () => {
+const ServicePage = () => {
   return (
     <>
       <section className='flex relative bg-gray-100 gap-16'>
@@ -87,4 +87,4 @@ const ServicesPage = () => {
     </>
   );
 };
-export default ServicesPage;
+export default ServicePage;

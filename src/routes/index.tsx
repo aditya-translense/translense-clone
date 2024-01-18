@@ -4,7 +4,7 @@ import {
   HomePage,
   AboutPage,
   CareerPage,
-  ServicesPage,
+  ServicePage,
   ContactPage,
 } from '../pages';
 
@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'services',
-        element: <ServicesPage />,
+        element: <ServicePage />,
       },
       {
         path: 'contact',

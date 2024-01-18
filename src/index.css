@@ -50,3 +50,17 @@ p {
     ),
     url('./src/assets/images/hero-bg.png') center/cover no-repeat;
 }
+
+.about-header {
+  background: linear-gradient(rgba(40, 60, 134, 0.6), rgba(55, 113, 101, 0.6)),
+    url('./src/assets/images/about14.png') center/cover no-repeat;
+}
+
+.about-header-2 {
+  background: linear-gradient(
+      rgba(40, 60, 134, 0.381),
+      rgba(55, 113, 101, 0.429),
+      rgba(69, 162, 71, 0.482)
+    ),
+    url('./src/assets/images/about15.png') center/cover no-repeat;
+}
