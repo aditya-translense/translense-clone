@@ -117,6 +117,7 @@ export const careerCardInfo = [
 
 export const careerLayoutCardInfo = [
   {
+    id: 1,
     image1: images.career5,
     image2: images.dottedLineRight,
     title: '1)Application',
@@ -124,6 +125,7 @@ export const careerLayoutCardInfo = [
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
   },
   {
+    id: 2,
     image1: images.dottedLineLeft,
     image2: images.career6,
     title: '1)Application',
@@ -131,6 +133,7 @@ export const careerLayoutCardInfo = [
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
   },
   {
+    id: 3,
     image1: images.career7,
     image2: images.dottedLineRight,
     title: '1)Application',
@@ -138,6 +141,7 @@ export const careerLayoutCardInfo = [
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
   },
   {
+    id: 4,
     image1: images.dottedLineLeft,
     image2: images.career8,
     title: '1)Application',
@@ -145,6 +149,7 @@ export const careerLayoutCardInfo = [
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
   },
   {
+    id: 5,
     image1: images.career9,
     image2: images.dottedLineRight,
     title: '1)Application',
@@ -152,9 +157,48 @@ export const careerLayoutCardInfo = [
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
   },
   {
+    id: 6,
     image2: images.career10,
     title: '1)Application',
     description:
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+];
+
+export const aboutCardInfo = [
+  {
+    id: 1,
+    image: images.about4,
+    name: 'John Doe',
+    designation: 'Web Development',
+    info: 'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+  },
+  {
+    id: 2,
+    image: images.about5,
+    name: 'John Doe',
+    designation: 'Web Development',
+    info: 'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+  },
+  {
+    id: 3,
+    image: images.about6,
+    name: 'John Doe',
+    designation: 'Web Development',
+    info: 'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+  },
+  {
+    id: 4,
+    image: images.about7,
+    name: 'John Doe',
+    designation: 'Web Development',
+    info: 'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+  },
+  {
+    id: 5,
+    image: images.about8,
+    name: 'John Doe',
+    designation: 'Web Development',
+    info: 'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
   },
 ];
