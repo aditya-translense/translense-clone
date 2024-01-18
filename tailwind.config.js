@@ -12,9 +12,12 @@ export default {
         'secondary-gray': '#757575',
         'green-shade': '#45a24766',
       },
+      textShadow: {
+        sm: '10px 10px 20px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
     },
   },
-  plugins: [
-    
-  ],
+  plugins: [],
 };

@@ -40,7 +40,7 @@ const ContactForm = () => {
             />
           </div>
           <div className='mt-4'>
-            <Button text='Send Message' className='mt-4 text-gray-700' />
+            <Button className='mt-4 text-gray-700'>Send Message</Button>
           </div>
         </div>
       </form>

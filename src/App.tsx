@@ -6,3 +6,6 @@ const App = () => {
 };
 
 export default App;
+
+// ui  development design system - Atoms ,molecules,organisms,templates,pages
+// class variants authority

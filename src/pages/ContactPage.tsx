@@ -1,38 +1,40 @@
-import { ContactForm } from '../components';
+import { ContactForm, SectionTitle } from '../components';
 import { images } from '../constants';
 
 const ContactPage = () => {
   return (
-    <section>
-      <div className='py-24 flex-center px-20 gap-16 align-element'>
+    <>
+      <section className='py-20 flex-center px-8 gap-16 align-element'>
         <article className=''>
-          <h1 className='capitalize font-bold text-5xl mb-6'>Contact Us</h1>
-          <p className='font-bold text-2xl'>
-            Want to grow with an organisation where we work as a team and share
-            a bond as a family . We{' '}
+          <SectionTitle className='uppercase text-start font-bold text-6xl mb-6 text-gray-800'>
+            Contact <span className='text-clr-yellow'>Us</span>
+          </SectionTitle>
+          <p className='font-bold text-2xl tracking-wide'>
+            Want to grow with an organization where we work as a team and share
+            a bond as a family . We
             <span className='text-clr-yellow'>welcome you to TRANSLENSE</span> ,
-            an organisation where dreams become reality .
+            an organization where dreams become reality .
           </p>
         </article>
         <article className='flex-center'>
-          <img src={images.img1} alt='' className='block w-full object-cover' />
+          <img src={images.img1} alt='' className='block-img' />
         </article>
-      </div>
+      </section>
 
-      <div className='bg-[#f7f9fb]'>
-        <div className='align-element py-24 flex-center px-20 gap-16 '>
+      <section className='bg-gray-100'>
+        <div className='align-element flex-center py-20 gap-16 '>
           <article>
-            <h1 className='capitalize font-bold text-5xl mb-8'>
-              get In <span className='text-clr-yellow'>Touch</span>
-            </h1>
+            <SectionTitle className='mb-8 text-start'>
+              Get In <span className='text-clr-yellow'>Touch</span>
+            </SectionTitle>
             <ContactForm />
           </article>
           <article>
-            <img src={images.img2} alt='' className='block w-full object-cover' />
+            <img src={images.img2} alt='' className='block-img' />
           </article>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 export default ContactPage;

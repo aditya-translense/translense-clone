@@ -1,17 +1,15 @@
 import { FaCheck } from 'react-icons/fa6';
 import { Button, SectionTitle, WhyUsCard } from '../components';
-import { whyUsInfo,images } from '../constants';
+import { whyUsInfo, images } from '../constants';
 
 const HomePage = () => {
   return (
     <>
-      <div className='header relative min-h-screen'>
-        <div className='absolute w-full h-full flex-center '>
-          <div className='align-element flex items-center justify-center gap-20 '>
+      <section className='header relative min-h-screen'>
+        <div className='banner absolute w-full h-full flex-center'>
+          <div className='align-element flex-center gap-20 '>
             <article className='text-white'>
-              <h2 className='text-5xl text-white font-bold mb-6'>
-                Achieving Incredible
-              </h2>
+              <h2 className='text-5xl font-bold mb-6'>Achieving Incredible</h2>
               <p className='mb-4 text-lg leading-7 tracking-wide'>
                 Translense products focus on providing digital platform for
                 system
@@ -31,14 +29,12 @@ const HomePage = () => {
                 </li>
 
                 <div className='flex items-center gap-4 mt-8'>
-                  <Button
-                    text='LEARN MORE'
-                    className='border-2 bg-transparent text-white'
-                  />
-                  <Button
-                    text='JOIN US'
-                    className='bg-clr-yellow text-primary-gray'
-                  />
+                  <Button className='border-2 bg-transparent text-white'>
+                    LEARN MORE
+                  </Button>
+                  <Button className='bg-clr-yellow text-primary-gray'>
+                    JOIN US
+                  </Button>
                 </div>
               </ul>
             </article>
@@ -47,11 +43,14 @@ const HomePage = () => {
             </article>
           </div>
         </div>
-      </div>
+      </section>
 
-      <section className='align-element'>
-        <div className=' py-20 '>
-          <SectionTitle text='We Create lovable products going from vision to launch' />
+      <section className='py-20 '>
+        <div className='align-element'>
+          <SectionTitle className='normal-case'>
+            We create <span className='text-clr-yellow'>lovable</span> products
+            going from vision to launch
+          </SectionTitle>
           <div className='flex justify-center relative mt-24'>
             <img
               src={images.patternImg3}
@@ -89,9 +88,11 @@ const HomePage = () => {
             />
           </div>
         </div>
+      </section>
 
-        <div className=' py-20'>
-          <SectionTitle text='Why Choose Us ?' />
+      <section className=' py-20'>
+        <div className='align-element'>
+          <SectionTitle>Why Choose Us ?</SectionTitle>
           <div className='flex gap-12 mt-24'>
             {whyUsInfo.map(({ id, title, subtitle, info, icon }) => {
               return (
@@ -106,11 +107,17 @@ const HomePage = () => {
             })}
           </div>
         </div>
+      </section>
 
-        <div className=' relative py-20 flex-center flex-col'>
-          <img src={images.patternImg1} alt='pattern-1' className='absolute left-10' />
-          <SectionTitle text='Join Our Team And Live YOUR Dream' />
-          <Button text='PARTNER WITH US' className='mx-auto mt-24' />
+      <section className='py-20'>
+        <div className='relative align-element flex-center flex-col'>
+          <img
+            src={images.patternImg1}
+            alt='pattern-1'
+            className='absolute left-10'
+          />
+          <SectionTitle>Join Our Team And Live YOUR Dream</SectionTitle>
+          <Button className='mx-auto mt-24'>PARTNER WITH US</Button>
           <img
             src={images.patternImg2}
             alt='pattern-2'

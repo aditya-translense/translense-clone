@@ -90,3 +90,71 @@ export const serviceCardInfo = [
       'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
   },
 ];
+
+export const careerCardInfo = [
+  {
+    id: 1,
+    title: 'UI/UX',
+    info: 'Designing and developing a UI/UX with easy flow and better user gathering.',
+    className: 'bg-[rgba(40,60,134,.5)]',
+    img: images.career2,
+  },
+  {
+    id: 2,
+    title: 'UI/UX',
+    info: 'Designing and developing a UI/UX with easy flow and better user gathering.',
+    className: 'bg-[rgba(255,193,7,0.5)]',
+    img: images.career3,
+  },
+  {
+    id: 3,
+    title: 'UI/UX',
+    info: 'Designing and developing a UI/UX with easy flow and better user gathering.',
+    className: 'bg-[rgba(69,162,127,.5)]',
+    img: images.career4,
+  },
+];
+
+export const careerLayoutCardInfo = [
+  {
+    image1: images.career5,
+    image2: images.dottedLineRight,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+  {
+    image1: images.dottedLineLeft,
+    image2: images.career6,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+  {
+    image1: images.career7,
+    image2: images.dottedLineRight,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+  {
+    image1: images.dottedLineLeft,
+    image2: images.career8,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+  {
+    image1: images.career9,
+    image2: images.dottedLineRight,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+  {
+    image2: images.career10,
+    title: '1)Application',
+    description:
+      'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+  },
+];
