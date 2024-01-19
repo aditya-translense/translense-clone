@@ -61,33 +61,33 @@ export const serviceCardInfo = [
   },
   {
     id: 2,
-    title: 'Web Development',
+    title: 'Product Build',
     description:
-      'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+      'From thinking to implementing the needs of clients and creating the product from scratch. We deliver what one think.',
   },
   {
     id: 3,
-    title: 'Web Development',
+    title: 'Technical Optimisation',
     description:
-      'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+      'One of the main aspects of optimisation is SEO optimization in order to rank high in SERPs so that the user can find your brand in the easiest way possible . The UX is also very important for converting the user into lead . At Atulaey we provide all these optimaization .',
   },
   {
     id: 4,
-    title: 'Web Development',
+    title: 'Graphics Designing  ',
     description:
-      'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+      'We offer Graphic Design services , the process of creating visual content in form of pictures, illustrations, typography, icons, photos, etc. to communicate messages . Designers create a concept and develop print-friendly designs for product packaging.',
   },
   {
     id: 5,
-    title: 'Web Development',
+    title: 'Software Development',
     description:
-      'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+      'We build Softwares . The Services are aimed at designing, engineering, deploying, supporting, and evolving various software types in order to match the requirement of the digitalised world to acheive everything within comfort .',
   },
   {
     id: 6,
-    title: 'Web Development',
+    title: 'Application Development',
     description:
-      'Whatever field or industry you want your website to be built in, with our qualified webdevelopers and designers you will find web solutions that go beyond your expectations in terms of performance and usability.',
+      'We provide App Development having great user experience and smooth flow from one screen to other. We focus on what we can build to make it easy for both literate and illiterate to navigate through an application to fulfill their requirement and get the best out of it .',
   },
 ];
 
