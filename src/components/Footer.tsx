@@ -35,12 +35,16 @@ const Footer = () => {
             <h3 className='text-xl mb-3'>CONTACT US</h3>
             <div className='flex flex-col gap-2'>
               <p className='hover:text-clr-yellow transition-all duration-300'>
-                1 A 15 Avas Vikas Colony varanasi U.P
+                Avas vikas Varanasi Uttar pradesh 221102 .
               </p>
               <p className=' hover:text-white duration-300'>
-                translense@outlook.com
+                <a href='mailto:enquire@translense.com'>
+                  enquire@translense.com
+                </a>
               </p>
-              <p className='hover:text-white duration-300'>840-040-8888</p>
+              <p className='hover:text-white duration-300'>
+                <a href='tel:+1234567890'>8400408888</a>
+              </p>
             </div>
           </article>
 

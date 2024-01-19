@@ -26,7 +26,7 @@
   }
 
   .before-element {
-    @apply before:h-[2px] before:w-3/5 before:duration-300 before:bg-clr-yellow hover:before:bg-primary-gray hover:before:w-full before:transition-all before:rounded-md before:absolute before:-bottom-2;
+    @apply before:h-[2px] before:w-3/5 before:duration-500 before:bg-clr-yellow hover:before:bg-primary-gray hover:before:w-full before:transition-all before:rounded-md before:absolute before:-bottom-2;
   }
 
   .block-img {
@@ -62,4 +62,10 @@ p {
       rgba(186, 213, 53, 0.404) /* rgba(69, 162, 101, 0.7)  */
     ),
     url('./src/assets/images/about15.png') center/cover no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .links-container {
+    height: auto !important;
+  }
 }
