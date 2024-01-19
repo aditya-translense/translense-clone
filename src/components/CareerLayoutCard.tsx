@@ -12,7 +12,7 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
   description,
 }) => {
   return (
-    <article className='flex last:justify-between w-full p-12 last:w-full'>
+    <article className='shadow lg:shadow-none lg:flex last:justify-between w-full p-12 last:w-full'>
       <div className=''>
         {image1 && (
           <img src={image1} alt={title} className='block w-full object-cover' />

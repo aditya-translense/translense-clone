@@ -6,7 +6,7 @@
 
 @layer components {
   .align-element {
-    @apply w-[90vw] max-w-6xl mx-auto;
+    @apply w-[80vw] max-w-6xl mx-auto;
   }
 
   .flex-center {
@@ -58,9 +58,8 @@ p {
 
 .about-header-2 {
   background: linear-gradient(
-      rgba(40, 60, 134, 0.381),
-      rgba(55, 113, 101, 0.429),
-      rgba(69, 162, 71, 0.482)
+      rgba(0, 0, 0, 0.8),
+      rgba(186, 213, 53, 0.404) /* rgba(69, 162, 101, 0.7)  */
     ),
     url('./src/assets/images/about15.png') center/cover no-repeat;
 }

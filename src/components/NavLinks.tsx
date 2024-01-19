@@ -8,7 +8,9 @@ interface INavLinksProps {
 
 const NavLinks: React.FC<INavLinksProps> = ({ parentClass, childClass }) => {
   return (
-    <ul className={`flex items-center gap-8 text-white ${parentClass}`}>
+    <ul
+      className={`hidden md:flex items-center gap-8 text-white ${parentClass}`}
+    >
       {navLinks.map(({ id, href, text }) => {
         return (
           <li key={id}>

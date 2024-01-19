@@ -25,7 +25,7 @@ const CareerFormInput: React.FC<ICareerFormInput> = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`outline-none border-b border-b-gray-400 py-3 placeholder:text-gray-400 block w-full ${className}`}
+        className={`outline-none border-b border-b-gray-400 py-1 placeholder:text-gray-400 placeholder:text-sm block w-full ${className}`}
         required={required}
       />
     </div>

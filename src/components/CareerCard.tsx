@@ -13,7 +13,7 @@ const CareerCard: React.FC<ICardProps> = ({
 }) => {
   return (
     <article
-      className={`relative text-white flex flex-col px-6 text-center  flex-1 items-center justify-center h-[400px] ${className}`}
+      className={`relative text-white flex flex-col px-6 text-center flex-auto items-center justify-center h-[400px] w-full lg:w-1/3 p-12 ${className}`}
     >
       <img
         src={image}

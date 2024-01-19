@@ -17,16 +17,16 @@ import { images, careerCardInfo, careerLayoutCardInfo } from '../constants';
 const CareerPage = () => {
   return (
     <>
-      <section className='py-20'>
-        <div className='align-element flex-center gap-6'>
-          <article className='max-w-xl px-12'>
-            <SectionTitle className='text-start text-5xl font-bold'>
+      <section className='py-12 lg:py-20'>
+        <div className='align-element lg:flex-center gap-6'>
+          <article className='max-w-xl lg:px-12 mb-16 md:mb-auto'>
+            <SectionTitle className='text-start font-bold'>
               Start your <span className='text-clr-yellow'>Career</span> with{' '}
               <span className='text-clr-yellow'>Translense</span>
             </SectionTitle>
 
             <p className='my-6 text-xl font-bold tracking-wide'>
-              We’re rapidly growing with all of our teams. We look for
+              We're rapidly growing with all of our teams. We look for
               self-starters with a bias towards action, a thirst for learning,
               and will for asking the right questions. We strive for Translense
               to be the place where you do your{' '}
@@ -49,7 +49,7 @@ const CareerPage = () => {
           <SectionTitle className='capitalize'>
             We're <span className='text-clr-yellow'>hiring</span>
           </SectionTitle>
-          <div className='flex rounded-3xl overflow-hidden mt-20'>
+          <div className='md:flex rounded-3xl overflow-hidden mt-20 flex-wrap'>
             {careerCardInfo.map(({ id, title, info, className, img }) => (
               <CareerCard
                 key={id}
@@ -88,14 +88,14 @@ const CareerPage = () => {
             <SectionTitle className='uppercase'>
               Get In <span className='text-clr-yellow'>Touch</span>
             </SectionTitle>
-            <p className='w-full max-w-full text-center bg-red text-sm mt-6'>
+            <p className='w-full max-w-2xl mx-auto text-center bg-red text-sm mt-6 tracking-wider'>
               For joining do let us know about you . We will be happy to know
               you . Please fill the form and we will reach out to you .
             </p>
           </article>
 
-          <article className='mt-20 overflow-hidden bg-red-200 rounded-3xl flex'>
-            <div className='flex-grow-0 flex-shrink-0 w-1/3 bg-primary-gray text-white px-12 py-8 relative'>
+          <article className='mt-16 overflow-hidden bg-red-200 rounded-3xl flex flex-col-reverse lg:flex-row'>
+            <div className='flex-grow-0 flex-shrink-0 lg:w-1/3 bg-primary-gray text-white px-12 py-8 relative'>
               <p className='text-md'>
                 Fill up the form and our Team will get back to you within 24
                 hours.
@@ -119,9 +119,11 @@ const CareerPage = () => {
                   840-040-8888
                 </li>
               </ul>
-              <Button className='bg-transparent border border-white'>
-                BOOK A MEETING !
-              </Button>
+              <div className='w-full'>
+                <Button className=' border border-white w-full block'>
+                  BOOK A MEETING !
+                </Button>
+              </div>
 
               <ul className='flex gap-4 mt-20'>
                 <li className=' flex items-center justify-center text-primary-gray p-2 text-xl font-bold rounded-full bg-white'>

@@ -7,10 +7,10 @@ interface ICardProps {
 
 const WhyUsCard: React.FC<ICardProps> = ({ title, subtitle, info, icon }) => {
   return (
-    <article className='relative shadow-lg p-12 bg-[#F4F5F6] transition-all duration-300 hover:shadow-xl rounded-md'>
+    <article className='relative shadow-lg p-8 bg-[#F4F5F6] transition-all duration-300 hover:shadow-xl rounded-md'>
       <img
         src={icon}
-        className='h-16 w-16 absolute top-4 -left-0 -translate-x-1/2 '
+        className='h-12 w-12 absolute top-4 -left-0 -translate-x-1/2 '
       />
       <h2 className='text-lg font-semibold tracking-wider capitalize'>
         {title}
