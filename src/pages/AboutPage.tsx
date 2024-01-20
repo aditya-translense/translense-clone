@@ -1,13 +1,33 @@
+import { useEffect, useState } from 'react';
 import { SectionTitle, AboutCard, Button } from '../components';
 import { aboutCardInfo, images } from '../constants';
 
+const roles = ['all', 'designing', 'development', 'marketing'];
 const AboutPage = () => {
+  const [active, setActive] = useState('all');
+  const [filteredData, setFilteredData] = useState(aboutCardInfo);
+
+  const handleFilter = (category: string) => {
+    if (category === 'all') {
+      setActive('all');
+      setFilteredData(aboutCardInfo);
+    } else {
+      const filtered = aboutCardInfo.filter((item) => item.role === category);
+      setActive(category);
+      setFilteredData(filtered);
+    }
+  };
+
+  useEffect(() => {
+    handleFilter(active);
+  }, [active]);
+
   return (
     <>
-      <section className='py-20'>
-        <div className='align-element flex-center gap-6'>
-          <article className='max-w-xl px-12 self-start pt-16'>
-            <SectionTitle className='text-start text-5xl font-bold'>
+      <section className='py-6'>
+        <div className='align-element md:flex-center gap-6'>
+          <article className='max-w-xl md:px-6 self-start pt-16'>
+            <SectionTitle className='text-start'>
               About <span className='text-clr-yellow'>Us</span>
             </SectionTitle>
 
@@ -29,14 +49,17 @@ const AboutPage = () => {
       </section>
 
       <section className='py-20'>
-        <SectionTitle className=' mr-0'>
-          Our Success <span className='text-clr-yellow'>Story</span>
-        </SectionTitle>
-
-        <div className='w-full h-[400px] about-header mt-20'></div>
-        <div className=' mt-12 flex gap-12 align-element'>
-          <div className='relative -top-16 h-[420px] w-[500px] text-white p-12 rounded-2xl about-header-2'>
-            <p className='tracking-wider text-lg'>
+        <div className='align-element'>
+          <SectionTitle className=' mr-0'>
+            Our Success <span className='text-clr-yellow'>Story</span>
+          </SectionTitle>
+        </div>
+        {/*  */}
+        <div className='w-full min-h-60 md:min-h-96 about-header mt-12'></div>
+        {/*  */}
+        <article className=' lg:flex align-element gap-12'>
+          <div className='lg:w-[60%]  self-stretch text-white p-6 md:p-16 rounded-2xl about-header-2 -translate-y-14'>
+            <p className='tracking-wide leading-6 md:leading-8 md:text-lg'>
               When thoughts starts converting to reality , impossible start
               converting to possibility , we stand there . Emerging from small
               part of the country and making up the mind to acheive big . From
@@ -48,47 +71,63 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className='flex-1'>
-            <div className='relative h-[250px] w-[250px] rounded-full -top-10'>
-              <img src={images.about2} alt='' />
+          <div className='flex lg:flex-col items-start mt-2 justify-center gap-x-16 flex-1'>
+            <div className='flex-1'>
+              <img
+                src={images.about2}
+                alt=''
+                className='block-img lg:w-56 w-full'
+              />
             </div>
-            <div className='relative left-1/3 -top-20 h-[270px] w-[270px] rounded-full'>
-              <img src={images.about3} alt='' />
+            <div className='place-self-end flex-1 '>
+              <img
+                src={images.about3}
+                alt=''
+                className='block-img lg:w-56 w-full'
+              />
             </div>
           </div>
-        </div>
+        </article>
       </section>
 
       <section className='py-20 bg-gray-100'>
-        <div className='max-w-[1300px] mx-auto'>
-          <SectionTitle>Meet Our Team</SectionTitle>
+        <div className='align-element mx-auto'>
+          <SectionTitle className='ml-0'>
+            Meet Our <span className='text-clr-yellow'>Team</span>
+          </SectionTitle>
 
-          <div className='mt-16'>
-            <ul className='flex-center gap-12 text-xl w-1/2 mx-auto'>
-              <li className=' relative font-semibold after:absolute after:bg-black after:bottom-0 after:h-[2px] after:left-0 after:w-full '>
-                <button>All</button>
-              </li>
-              <li className=' relative font-semibold '>
-                <button>Designing</button>
-              </li>
-              <li className=' relative font-semibold '>
-                <button>Development</button>
-              </li>
-              <li className=' relative font-semibold '>
-                <button>Marketing</button>
-              </li>
-            </ul>
-
-            <div className='mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6'>
-              {aboutCardInfo.map(({ id, image, name, info, designation }) => (
-                <AboutCard
-                  key={id}
-                  img={image}
-                  name={name}
-                  designation={designation}
-                  info={info}
-                />
+          <div className='mt-12'>
+            <div className='flex justify-between flex-center gap-2 text-xl mx-auto max-w-md'>
+              {roles.map((role, index) => (
+                <button
+                  onClick={(e) =>
+                    setActive((e.target as HTMLButtonElement).innerHTML)
+                  }
+                  className={`relative capitalize text-base tracking-wider transition-all duration-300 ${
+                    role === active
+                      ? 'text-clr-yellow after:absolute after:h-[2px] antialiased after:-bottom-1 after:left-0 after:bg-black after:w-full after:rounded:lg'
+                      : ''
+                  }`}
+                  key={index}
+                >
+                  {role}
+                </button>
               ))}
+            </div>
+
+            {/*  after:absolute after:bg-black after:bottom-0 after:h-[2px] after:left-0 after:w-full */}
+            <div className='mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
+              {filteredData.map(({ id, image, name, info, designation }) => {
+                return (
+                  <AboutCard
+                    key={id}
+                    img={image}
+                    name={name}
+                    designation={designation}
+                    info={info}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -96,18 +135,20 @@ const AboutPage = () => {
 
       <section className='py-24'>
         <div className='align-element'>
-          <div className='flex flex-col justify-start items-start relative mb-20'>
-            <p className='text-clr-yellow capitalize text-lg'>Quick Contact</p>
-            <SectionTitle className='text-start ml-0'>
-              Want to get our services ?
+          <div className='flex flex-col justify-start items-start'>
+            <p className='text-clr-yellow capitalize text-md'>Quick Contact</p>
+            <SectionTitle className='text-start ml-0 normal-case'>
+              Want to <span className='text-clr-yellow'>grow</span> with us ?
             </SectionTitle>
-            <img
-              src={images.dottedLineImg}
-              alt='dotted image'
-              className='absolute w-2/4 left-2/4 top-20 -translate-x-1/2 rotate-6'
-            />
+            <div className='  w-full flex justify-center items-center'>
+              <img
+                src={images.dottedLineImg}
+                alt='dotted image'
+                className='hidden md:flex text-center mx-auto w-[50%] rotate-12'
+              />
+            </div>
           </div>
-          <div className='flex justify-end pr-20 '>
+          <div className='flex justify-end items-start mt-8 pr-16'>
             <Button>GET A CALL</Button>
           </div>
         </div>

@@ -1,20 +1,44 @@
 import { useState } from 'react';
-import { Button, CareerFormInput } from './index';
+import { Button, CareerFormInput, Checkbox } from './index';
+import { interestedAreaInfo } from '../constants';
+
+interface IFormValues {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  interestedArea: string[];
+  message: string;
+}
+const initialValues: IFormValues = {
+  firstName: 'Aditya',
+  lastName: 'Yadav',
+  phone: '1234567890',
+  email: 'aditya@translense.com',
+  interestedArea: [],
+  message: 'aditya',
+};
 
 const CareerForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: 'Aditya',
-    lastName: 'Yadav',
-    phone: '1234567890',
-    email: 'aditya@translense.com',
-    message: 'aditya',
-  });
+  const [formData, setFormData] = useState(initialValues);
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (e.target.name === 'interestedArea') {
+      let copy = { ...formData };
+      if ((e.target as HTMLInputElement).checked) {
+        copy.interestedArea.push(e.target.value);
+      } else {
+        copy.interestedArea = copy.interestedArea.filter(
+          (area: string) => area !== e.target.value
+        );
+      }
+      setFormData(copy);
+    } else {
+      setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    }
   };
 
   const handleValidation = () => {
@@ -36,17 +60,20 @@ const CareerForm = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(formData);
 
     if (handleValidation()) {
       return;
     }
     setErrorMessage('');
+
     setFormData({
       firstName: '',
       lastName: '',
       phone: '',
       email: '',
       message: '',
+      interestedArea: [],
     });
     console.log('form submitted');
   };
@@ -59,7 +86,7 @@ const CareerForm = () => {
             <p className='text-red-500 text-xs'>{errorMessage}</p>
           </div>
         )}
-        <div className='flex w-full gap-8'>
+        <div className='flex flex-col md:flex-row w-full gap-8'>
           <CareerFormInput
             id='firstName'
             label='First Name'
@@ -81,7 +108,7 @@ const CareerForm = () => {
             value={formData.lastName}
           />
         </div>
-        <div className='flex w-full gap-8'>
+        <div className='flex flex-col md:flex-row w-full gap-8'>
           <CareerFormInput
             id='phone'
             label='Phone'
@@ -104,27 +131,21 @@ const CareerForm = () => {
           />
         </div>
 
-        {/* <div className=''>
+        <div className=''>
           <p>I'd love to</p>
-          <ul className='flex gap-4 mt-2'>
-            <li className=''>
-              <input
-                type='checkbox'
-                name='interestedArea'
-                id=''
-                checked={false}
-                onChange={() => {}}
-                className='appearance-none'
-              />
-              <label
-                htmlFor=''
-                className='cursor-pointer duration-300 transition-all text-sm capitalize hover:border-gray-900 p-4 flex items-center justify-center border border-gray-400 rounded-full'
-              >
-                options1    
-              </label>
-            </li>
+          <ul className='flex flex-wrap gap-4 mt-2'>
+            {interestedAreaInfo.map(({ id, label, interest }) => (
+              <li key={id}>
+                <Checkbox
+                  formData={formData}
+                  interest={interest}
+                  label={label}
+                  onChange={handleChange}
+                />
+              </li>
+            ))}
           </ul>
-        </div> */}
+        </div>
 
         <div>
           <label htmlFor='message' className='capitalize'>
@@ -141,7 +162,7 @@ const CareerForm = () => {
           ></textarea>
         </div>
 
-        <div>
+        <div className='flex justify-end'>
           <Button type='submit'>Send Message</Button>
         </div>
       </form>

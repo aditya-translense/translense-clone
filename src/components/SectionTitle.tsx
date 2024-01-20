@@ -9,7 +9,7 @@ const SectionTitle: React.FC<ISectionTitleProps> = ({
 }) => {
   return (
     <h2
-      className={`font-bold text-5xl leading-tight text-[#212529] capitalize text-center max-w-2xl mx-auto ${className}`}
+      className={`font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#212529] capitalize text-center max-w-xl mx-auto ${className}`}
     >
       {children}
     </h2>

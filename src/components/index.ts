@@ -12,3 +12,4 @@ export { default as CareerLayoutCard } from './CareerLayoutCard';
 export { default as CareerFormInput } from './ui/CareerFormInput';
 export { default as CareerForm } from './CareerForm';
 export { default as AboutCard } from './AboutCard';
+export { default as Checkbox } from './ui/Checkbox';

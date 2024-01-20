@@ -57,7 +57,7 @@ const ContactForm = () => {
           </div>
         )}
         <div className='flex flex-col gap-2'>
-          <div className='flex gap-6 '>
+          <div className=' flex flex-col lg:flex-row gap-6 '>
             <Input
               type='text'
               name='name'
