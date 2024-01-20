@@ -22,7 +22,7 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
             src={image1}
             alt={title}
             className={`w-full object-cover ${
-              isDotted1 ? 'hidden lg:block' : 'block'
+              isDotted1 ? 'hidden lg:block' : 'block lg:hidden'
             }`}
           />
         )}
@@ -37,7 +37,7 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
             src={image2}
             alt={title}
             className={`w-full object-cover ${
-              isDotted2 ? 'hidden lg:block' : 'block'
+              isDotted2 ? 'hidden lg:block' : 'block lg:hidden'
             }`}
           />
         )}
