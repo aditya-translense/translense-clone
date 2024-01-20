@@ -11,12 +11,12 @@ interface IFormValues {
   message: string;
 }
 const initialValues: IFormValues = {
-  firstName: 'Aditya',
-  lastName: 'Yadav',
-  phone: '1234567890',
-  email: 'aditya@translense.com',
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
   interestedArea: [],
-  message: 'aditya',
+  message: '',
 };
 
 const CareerForm = () => {

@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 const useFormHandleChange = () => {
   const [formData, setFormData] = useState({
-    name: 'Aditya',
-    email: 'aditya.translense@gmail.com',
-    subject: 'Testing Testing Testing Testing',
-    message: 'Testing Testing Testing Testing',
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
   });
   const [errorMessage, setErrorMessage] = useState('');
 
