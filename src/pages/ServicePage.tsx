@@ -5,9 +5,11 @@ const ServicePage = () => {
   return (
     <>
       <section className='flex flex-col lg:flex-row relative bg-gray-100 gap-16'>
-        <article className=' pt-20 pl-20 text-start'>
-          <SectionTitle className='text-start ml-0'>Our Services</SectionTitle>
-          <p className='mt-6 font-bold tracking-wider text-xl max-w-md text-ellipsis'>
+        <article className='p-8 md:pt-20 md:pl-20 text-start'>
+          <SectionTitle className='text-start ml-0'>
+            Our <span className='text-clr-yellow'>Services</span>
+          </SectionTitle>
+          <p className='mt-6 font-bold tracking-wider text-base md:text-xl text-ellipsis'>
             Every good company wants to provide excellent customer service, but
             it's not always easy to balance that with other{' '}
             <span className='text-clr-yellow'>business needs and goals</span>.
@@ -18,8 +20,8 @@ const ServicePage = () => {
             trending products .
           </p>
         </article>
-        <article className='flex-1 block w-full '>
-          <img src={images.serviceBgImg} alt='' className='w-full h-full ' />
+        <article className='flex-1 '>
+          <img src={images.serviceBgImg} alt='' className='block-img ' />
         </article>
       </section>
 

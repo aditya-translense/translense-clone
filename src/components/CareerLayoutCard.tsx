@@ -11,11 +11,20 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
   title,
   description,
 }) => {
+  const isDotted1 = image1 && image1.includes('dotted');
+  const isDotted2 = image2 && image2.includes('dotted');
+
   return (
-    <article className='shadow lg:shadow-none lg:flex last:justify-between w-full p-12 last:w-full'>
+    <article className='shadow-lg lg:shadow-none flex flex-col gap-6 lg:flex-row last:justify-between w-full p-12 last:w-full'>
       <div className=''>
         {image1 && (
-          <img src={image1} alt={title} className='block w-full object-cover' />
+          <img
+            src={image1}
+            alt={title}
+            className={`w-full object-cover ${
+              isDotted1 ? 'hidden lg:block' : 'block'
+            }`}
+          />
         )}
       </div>
       <div>
@@ -24,7 +33,13 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
       </div>
       <div>
         {image2 && (
-          <img src={image2} alt={title} className='block w-full object-cover' />
+          <img
+            src={image2}
+            alt={title}
+            className={`w-full object-cover ${
+              isDotted2 ? 'hidden lg:block' : 'block'
+            }`}
+          />
         )}
       </div>
     </article>

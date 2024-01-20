@@ -67,7 +67,7 @@ const CareerPage = () => {
         <SectionTitle>
           Our Recruitment <span className='text-clr-yellow'>Process</span>
         </SectionTitle>
-        <div className='mt-12 flex flex-col justify-center items-center'>
+        <div className='mt-12 flex gap-6 flex-col justify-center  items-center'>
           {careerLayoutCardInfo.map(
             ({ id, image1, image2, title, description }) => (
               <CareerLayoutCard

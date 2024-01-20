@@ -49,16 +49,17 @@ const AboutPage = () => {
       </section>
 
       <section className='py-20'>
-        <SectionTitle className=' mr-0'>
-          Our Success <span className='text-clr-yellow'>Story</span>
-        </SectionTitle>
-
+        <div className='align-element'>
+          <SectionTitle className=' mr-0'>
+            Our Success <span className='text-clr-yellow'>Story</span>
+          </SectionTitle>
+        </div>
         {/*  */}
-        <div className='w-full min-h-60 md:min-h-96 about-header mt-20'></div>
+        <div className='w-full min-h-60 md:min-h-96 about-header mt-12'></div>
         {/*  */}
         <article className=' lg:flex align-element gap-12'>
-          <div className='lg:w-[60%]  self-stretch text-white p-16 rounded-2xl about-header-2 -translate-y-14'>
-            <p className='tracking-wider leading-9 text-lg'>
+          <div className='lg:w-[60%]  self-stretch text-white p-6 md:p-16 rounded-2xl about-header-2 -translate-y-14'>
+            <p className='tracking-wide leading-6 md:leading-8 md:text-lg'>
               When thoughts starts converting to reality , impossible start
               converting to possibility , we stand there . Emerging from small
               part of the country and making up the mind to acheive big . From
@@ -71,18 +72,18 @@ const AboutPage = () => {
           </div>
 
           <div className='flex lg:flex-col items-start mt-2 justify-center gap-x-16 flex-1'>
-            <div>
+            <div className='flex-1'>
               <img
                 src={images.about2}
                 alt=''
-                className='block-img w-72 lg:w-56'
+                className='block-img lg:w-56 w-full'
               />
             </div>
-            <div className='place-self-end'>
+            <div className='place-self-end flex-1 '>
               <img
                 src={images.about3}
                 alt=''
-                className='block-img w-72 lg:w-56'
+                className='block-img lg:w-56 w-full'
               />
             </div>
           </div>
