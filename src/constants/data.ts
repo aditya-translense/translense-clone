@@ -123,6 +123,8 @@ export const careerLayoutCardInfo = [
     title: '1)Application',
     description:
       'Review the minimum qualification of the job. If qualify then apply on our website www.atulaey.com',
+    isHidden1: false,
+    isHidden2: true,
   },
   {
     id: 2,
@@ -131,6 +133,8 @@ export const careerLayoutCardInfo = [
     title: '2 ) QUALIFICATION REVIEW',
     description:
       'Our goal is to hire best talent from the country. Applications are reviewed and contacted by mail.',
+    isHidden1: true,
+    isHidden2: false,
   },
   {
     id: 3,
@@ -139,6 +143,8 @@ export const careerLayoutCardInfo = [
     title: '3 ) EXAMINATION',
     description:
       'Depending upon the position , a exam is conducted to check the required skillset.',
+    isHidden1: false,
+    isHidden2: true,
   },
   {
     id: 4,
@@ -147,6 +153,8 @@ export const careerLayoutCardInfo = [
     title: '4 ) INTERVIEW',
     description:
       'Qualified candidates are then checked by interview to know the best.',
+    isHidden1: true,
+    isHidden2: false,
   },
   {
     id: 5,
@@ -155,6 +163,8 @@ export const careerLayoutCardInfo = [
     title: '5 ) JOB OFFER',
     description:
       'The hiring manager will directly reach out to selected candidate through mail and call.',
+    isHidden1: false,
+    isHidden2: true,
   },
   {
     id: 6,
@@ -162,6 +172,8 @@ export const careerLayoutCardInfo = [
     title: '6 ) ONBOARDING',
     description:
       'The onboarding process include required task to ensure you have an efficient start to your employement.',
+    isHidden1: true,
+    isHidden2: false,
   },
 ];
 

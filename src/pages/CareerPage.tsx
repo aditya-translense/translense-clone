@@ -69,13 +69,23 @@ const CareerPage = () => {
         </SectionTitle>
         <div className='mt-12 flex gap-6 flex-col justify-center  items-center'>
           {careerLayoutCardInfo.map(
-            ({ id, image1, image2, title, description }) => (
+            ({
+              id,
+              image1,
+              image2,
+              title,
+              description,
+              isHidden1,
+              isHidden2,
+            }) => (
               <CareerLayoutCard
                 key={id}
                 image1={image1}
                 image2={image2}
                 title={title}
                 description={description}
+                isHidden1={isHidden1}
+                isHidden2={isHidden2}
               />
             )
           )}
