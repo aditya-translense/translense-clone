@@ -3,6 +3,8 @@ interface ICareerLayoutCardProps {
   title: string;
   description: string;
   image2?: string;
+  isHidden1?: boolean;
+  isHidden2?: boolean;
 }
 
 const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
@@ -10,14 +12,13 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
   image2,
   title,
   description,
+  isHidden1,
+  isHidden2,
 }) => {
-  const isDotted1 = image1 && image1.includes('dotted');
-  const isDotted2 = image2 && image2.includes('dotted');
-
   return (
     <article className='shadow-lg lg:shadow-none flex flex-col gap-6 lg:flex-row last:justify-between w-full p-12 last:w-full'>
       {image1 && (
-        <div className={`${isDotted1 ? 'hidden lg:block' : 'block'}`}>
+        <div className={`${isHidden1 ? 'hidden md:block' : ''}`}>
           <img src={image1} alt={title} className={`w-full object-cover`} />
         </div>
       )}
@@ -28,7 +29,7 @@ const CareerLayoutCard: React.FC<ICareerLayoutCardProps> = ({
       </div>
 
       {image2 && (
-        <div className={`${isDotted2 ? 'hidden lg:block' : 'block'}`}>
+        <div className={isHidden2 ? 'hidden md:block' : ''}>
           <img src={image2} alt={title} className={`w-full object-cover `} />
         </div>
       )}
